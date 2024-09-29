@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Welcome to The Indian Summit
+    </title>
+    <!-- Insert site logo -->
+    <link rel="shortcut icon" href="../images/Homepage/Logo.png" type="image/x-icon">
+    <!-- Insert site stylesheet -->
+    <link rel="stylesheet" href="../css/styles.css">
+    <!-- Insert Countdown Link -->
+    <script src="https://cdn.logwork.com/widget/countdown.js"></script>
+    <!-- Insert Whatsapp link-->
+    <script src="https://kit.fontawesome.com/dbd1480747.js" crossorigin="anonymous"></script>
+    <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0b0c10;
+    color: white;
+    line-height: 1.6;
+}
+
+
+h1, h2 {
+    color: #eaeaea;
+    margin-bottom: 20px;
+}
+/* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #0b0c10;
+    color: white;
+}
+
+h1, h2 {
+    color: #ffffff;
+}*/
+
+.header-section {
+    position: relative;
+    background-image: url('../images/Intro & Theme/header.png');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+.header-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(48, 46, 46, 0.5); /* Example background color with opacity */
+}
+
+.header-section-content {
+    position: relative;
+    z-index: 2;
+}
+.center_header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+.header-content h1 {
+    font-size: 60px;
+    color: #fedfdf;
+    text-shadow: 4px 3px 3px #a14345;
+    font-weight: 600;
+    font-family: 'Cinzel', serif;
+}
+
+
+.quote-section {
+    background-image: url('../images/Intro & Theme/NEW (1).png');
+    background-size: cover;
+    background-position: center;
+    height: 65vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* .quote-content {
+    padding: 40px;
+    text-align: center;
+
+} */
+.quote-section p {
+    font-size: 1.2em;
+    line-height: 1.8em;
+}
+/* Container */
+.content-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    max-width: fit-content;
+}
+
+/* Mission & Vision Section */
+.mission-vision-section {
+    position: relative;
+    background-image:  url('../images/Homepage/Logo.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 70%;
+    height: auto;
+    padding: 30px 20px;
+    z-index: 1;
+}
+.mission-vision-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, #83541d 0%, rgba(42, 42, 33, 0.603)25%);
+    z-index: -1;
+}
+.mission-text {
+    flex: 1;
+    max-width: 840px;
+    padding: 20px;
+}
+
+.mission-text h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    font-family: 'Cinzel', serif;
+    text-shadow:2px 2px 4px #ffff9e;
+    padding-bottom: 30px;
+    text-align: center;
+}
+
+.mission-text ul {
+    margin-top: 20px;
+    list-style-type: disc;
+    padding-left: 40px;
+}
+
+.vision-image {
+    flex: 0 1 450px; /* Adjust image size */
+}
+
+.vision-image img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+
+.section{
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 30px;
+    padding: 0 20px;
+}
+
+.section .image{
+    width: 500px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section .image img{
+    width: 80%;
+    height: 80%;
+    margin-top: 100px;
+}
+
+
+.section .content h2{
+    font-size: 2.5rem;
+    font-weight: 600;
+    font-family: 'Cinzel', serif;
+    text-shadow:2px 2px 4px #ffff9e;
+    padding-bottom: 30px;
+    text-align:justify;
+}
+
+.content{
+    width: 700px;
+}
+.line {
+                margin-bottom: 5px; /* Adjust the value as needed */
+}
+@media (max-width: 1024px) {
+    .content-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .mission-vision-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .vision-image {
+        margin-top: 20px;
+        flex-basis: 100%; /* Take full width on smaller screens */
+    }
+
+    .mission-text h1 {
+        font-size: 2rem;
+    }
+    
+    .section {
+        grid-template-columns: 1fr; /* Make it single-column */
+    }
+
+    .section .image {
+        display: none;
+        
+    }
+    .quote-content {
+    padding: 10px;
+    text-align: center;
+}
+    .quote-section p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .mission-text h1 {
+        font-size: 1.8rem;
+    }
+    .quote-content {
+    padding: 10px;
+    text-align: center;
+}
+    .quote-section p {
+        font-size: 12px;
+    }
+
+    .why-us-section ul li, .mission-text ul li {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .content{
+        width: auto;
+    }
+    .line {
+                margin-bottom: 10px; /* Adjust the value as needed */
+    }
+    section .image img {
+        padding-bottom: 50px;
+}
+    .mission-text h1 {
+        font-size: 1.5rem;
+        align-items:center;
+        justify-content:center;
+    }
+
+    .quote-content {
+    padding: 10px;
+    text-align: center;
+}
+    .quote-section p {
+        font-size: 10px;
+    }
+
+    .why-us-section ul li, .mission-text ul li {
+        font-size: 0.9rem;
+    }
+
+    .header-section {
+        height: 100vh; /* Reduce height on mobile */
+    }
+    
+    .header-content h1 {
+        text-align: center;
+        font-size: 40px; /* Smaller header text on mobile */
+    }
+    .mission-vision-section {
+    position: relative;
+    background-image:  url('../images/Homepage/Logo.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 70%;
+    height: auto;
+    z-index: 1;
+}
+.mission-vision-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, #83541d 0%, rgba(42, 42, 33, 0.603)6%);
+    z-index: -1;
+}
+.vision-image{
+        display: none;
+    }
+
+}
+
+    </style>
+</head>
+<body>
+    
+    <div class="header-section">
+        <!-- Header Begin -->
+        <header id="header">
+            <div class="logo">
+                <a href="../../index.html"><img src="../images/Homepage/Logo.png" alt="logo"></a>
+            </div>
+            <nav id="nav">
+                <ul>
+                    <li><a id="active" href="/index.html">Home</a></li>
+                    <li>
+                        <a href="../Pages/Committee&Agenda.html">Committees and Agendas
+                        </a>
+                    </li>
+                    <!-- <li>
+                        <a href="#">Our Organisation
+                            <i class='fas fa-angle-down'></i>
+                        </a>
+                        <ul id="Our_Organisation">
+                            <li><a href="#">Secretariat</a></li>
+                            <li><a href="#">Memories</a></li>
+                            <li><a href="#">Mahila Sashaktikaran Avam Rastra Nirmarn</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Collabrations and Sponsors </a></li>
+                    <li><a href="#">Events</a></li> -->
+                    <li><a href="../Pages/MRN.html">Mahila Sashaktikaran Avam Rastra Nirmarn</a></li>
+                    <li>
+                        <a href="#">About Us
+                            <i class='fas fa-angle-down'></i>
+                        </a>
+                        <ul id="about">
+                            <li><a href="../Pages/Introduction.html">Introduction to The Indian Summit</a></li>
+                            <li><a href="../Pages/Theme.html">Theme of The Indian Summit 24</a></li>
+                            <li><a href="../Pages/Profile.html">Meet the Secretariat</a></li>
+                        </ul>
+                    </li>
+                    <!-- <li><a href="#">Schedule</a></li> -->
+                    <li><a href="../Pages/Contact Us.html">Contact Us</a></li>
+        
+                </ul>
+            </nav>
+            <a href="../Pages/Registration.html">
+                <button id="Register_button">Register Now</button>
+            </a>
+            <div id="hamburger">&#9776;</div>
+            <div id="cross">&times;</div>
+        </header>
+        <!-- Header End-->
+        <div class="center_header">
+            <div class="header-content">
+                <h1>Culture Says Everything ???</h1>
+            </div>
+        </div>
+    </div>
+
+    <section class="quote-section">
+        
+        <div class="quote-content">
+            <p>"Culture is the widening of the mind and of the spirit." — <b>&nbsp; Jawaharlal Nehru</b></p>
+            <p>Culture deeply influences every part of our lives. It shapes our thoughts, expressions, and traditions. <br>However, with globalization, our unique culture has been fading, and it's urgent that we address this issue to keep our heritage alive.</p>
+            <p>Good leaders play a vital role in preserving and nurturing culture. They have the power to challenge old norms and inspire pride in our traditions. <br> In these changing times, strong leadership is crucial for fostering a culture that brings out the best in everyone and ensures lasting success.</p>
+            <p>Understanding culture means recognizing the hidden meanings behind our behaviors and societal changes. <br> It’s essential to tackle the decline of our
+                cultural identity to maintain the richness and diversity that make us unique.</p>
+            <p>Let's focus on preserving our culture to guide our interactions and decisions, ensuring a vibrant future for all.</p>
+        </div>
+    </section>
+    
+    <!-- Mission & Vision Section -->
+    <section class="mission-vision-section">
+        <div class="content-container">
+            <div class="mission-text">
+                <h1 >Our Mission & Visions</h1>
+                <p>Act as a torchbearer in a step forward towards revival of the dwindling INDIAN CULTURE  and celebrate the UNITY IN DIVERSITY of our culture and reflect our theme “The Culture  Says Everything?”</p>
+                <ul>
+                    <li style="margin-bottom: 10px; padding-top: 10px;">Encourage PUBLIC SPEAKING and build confidence and empower the stellar youth of our  country with RESEARCH SKILLS to contribute to building a stout nation through  diplomacy. </li> <br>
+                    <li style="margin-bottom: 10px;">Celebrate and revive the INDIAN CULTURE in the new era of globalization, which has led  us distant from the roots of our rich cultural heritage.</li> <br>
+                    <li style="margin-bottom: 10px;">Upholding sustainable development through GREEN INITIATIVE.</li><br>
+                </ul>
+            </div>
+            <div class="vision-image">
+                <img src="../images/Intro & Theme/image.png" alt="Vision and Mission">
+            </div>
+        </div>
+    
+
+    <div class="section">
+        <div class="image">
+            <img src="../images/Intro & Theme/img2.png" alt="" />
+        </div>
+        <div class="content" >
+            <h2>WHY US</h2>
+            
+            <p>
+                <li class="line">Biggest conference ever held in North India</li>
+                <li class="line"> A unique theme which connects us to our own roots</li>
+                <li class="line"> Engaging Sessions</li>
+                <li class="line"> Unique Moot Court Committee</li>
+                <li class="line"> Skill Development</li>
+                <li class="line"> Comfortable Venue</li>
+                <li class="line"> Completely Zero Plastic Event</li>
+                <li class="line"> Interactive activities</li>
+                <li class="line"> First class Executive Board</li>
+                <li class="line"> Internship Opportunities</li>
+                <li class="line"> Chance to meet the finest diplomats, Eminent Political Leaders, Advocates on Record at the Apex Court of the Country, Renowned Environmentalist and UN Diplomats among others</li>
+                <li class="line"> Exciting Prizes</li>
+                <li class="line"> Grandeur Cultural Event and a concert by a Celebrated Artist</li>
+                <li class="line"> And many more awaiting, so what are you waiting for?.... Don’t miss your chance to be inspired, connect, and make a real impact contributing to nation building in a unique manner!</li>
+            </p>
+        </div>
+    </div>
+</section>
+    <!-- Footar Begin -->
+    <footer>
+    <div class="container">
+        <div class="item-1">
+            <h1 class="heading" style="color: rgb(255, 255, 255);">Contact us</h1>
+            <a href="tel:+918958836666" style="color: rgb(255, 255, 255);">Phone: +918958836666
+            </a><br>
+            <a href="mailto:info@theindiansummit.com" style="color: rgb(255, 255, 255);">Email:
+                info@theindiansummit.com
+            </a>
+            <br>
+            <div style="margin-top: 20px; display: flex; flex-direction: row; gap: 10px;">
+                <a href="https://www.instagram.com/theindiansummit?igsh=a2IxdHI2dW84MG92" target="_blank"
+                    style="margin-right: 10px;">
+                    <img src="../images/Footer/instagram.png" alt="" width="25" height="25" />
+                </a>
+                <a href="https://www.linkedin.com/company/the-indian-summit/" target="_blank"
+                    style="margin-right: 10px;">
+                    <img src="../images/Footer/linkedin.png" alt="" width="25px" height="25px" />
+                </a>
+                <a href="https://wa.me/917665999929?text=Hello%20I%20have%20a%20query" target="_blank"
+                    style="margin-right: 10px;">
+                    <img src="../images/Footer/whatsapp.png" alt="" width="25px" height="25px" />
+                </a>
+            </div>
+        </div>
+        <div class="item-2">
+                <a href="src/Pages/Registration.html">Register</a>
+        </div>
+    </div>
+    </footer>
+    <!-- Footer End -->
+
+    <script>
+        let header = document.getElementById("header")
+        let nav = document.getElementById("nav");
+        let ham = document.getElementById("hamburger");
+        let cross = document.getElementById("cross");
+    
+        ham.addEventListener("click",()=>{
+            ham.style.display = "none"
+            cross.style.display = "block"
+            header.style.backgroundColor = "black"
+            if(nav.classList != "show"){
+                nav.style.zIndex = "9999"
+                nav.classList.add("show")
+            }
+    
+        })
+    
+        cross.addEventListener("click",()=>{
+            ham.style.display = "block"
+            cross.style.display = "none"
+            header.style.backgroundColor = "transparent"
+            if(nav.classList == "show"){
+                nav.classList.remove("show")
+            }
+        })
+    </script>
+</body>
+</html>
